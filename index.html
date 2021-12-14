@@ -1,123 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#FFC0CB">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <meta name="keywords" content="kittens, craft, Minecraft, server, smp">
-    <title>Kitten's Craft</title>
-    <meta name="title" content="Kitten's Craft">
-    <meta name="description" content="Kitten's Craft - Coming Soon! Rebranding from kittens-smp.xyz to a new and improved Minecraft Network!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kittenscraft.com/">
-    <meta property="og:title" content="Kitten's Craft">
-    <meta property="og:description" content="Kitten's Craft - Coming Soon! Rebranding from kittens-smp.xyz to a new and improved Minecraft Network!">
-    <meta data-react-helmet="true" property="og:image" content="https://kittenscraft.com/cat.png">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kittenscraft.com/">
-    <meta property="twitter:title" content="Kitten's Craft">
-    <meta property="twitter:description" content="Kitten's Craft - Coming Soon! Rebranding from kittens-smp.xyz to a new and improved Minecraft Network!">
-    <meta property="twitter:image" content="https://kittenscraft.com/cat.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitten's Craft</title> <!--- Website title -->
+    <link rel="stylesheet" href="dist/style.css"> 
+    <link rel="stylesheet" href="dist/test.css"> 
+    <meta property="og:site_name" content="Kitten's Craft">
+    <meta property="og:title" content="Kitten's Craft"> <!--- Embed Title -->
+    <meta property="og:description" content="Meet Kitten's Craft, the all new and best Minecraft server resolving around cats! Come join us today for free!"> <!--- Embed Description -->
+    <meta name="theme-color" content=#FFC0CB> <!--- Embed color -->
+    <link rel="icon" href="assets/logo.ico"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body bgcolor=”#000000">
-    <div class="bgimg">
-        <div class="topleft">
-        <p>kittenscraft.com</p>
+<body>
+    <div class="bg"></div>
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div> 
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+      </div>
+    <div class="center">
+        <div class="animate__animated animate__jackInTheBox">
+            <h1>Kitten's Craft</h1> <!--- Server Name -->
+            <p>Meet Kitten's Craft, the all new and best Minecraft server resolving around cats! Previously Kitten's SMP</p> <!--- Description -->
+            <div class="animate__animated animate__bounceIn animate__delay-1s">
+                <a href="https://discord.gg/Bd2HEHA9xf"><button class="btn1"><i class="fab fa-discord"></i> Discord</button></a>
+                <a href="https://kittenscraft.com/store"><button class="btn2"><i class="fas fa-coins"></i> Store</button></a>
+                <a href="https://kittenscraft.com/vote"><button class="btn3"><i class="fas fa-poll"></i> Vote</button></a>
+            </div>
         </div>
-        <div class="middle">
-        <h1>New server launches in</h1>
-        <hr>
-        <p id="demo" style="font-size:30px"></p>
-        </div>
-        <div class="bottomleft">
-        <p>Diverting from kittens-smp.xyz to a more new and better Minecraft server!</p>
-        </div>         
-        <embed src="background.mp3" loop="true" autostart="true" width="2" height="0">
     </div>
+    <script src="app/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/5acf4d9e80.js" crossorigin="anonymous"></script>
 </body>
-<style>
-        /* Set height to 100% for body and html to enable the background image to cover the whole page: */
-    body, html {
-    height: 100%
-    }
-    body {
-        overflow: hidden; /* Hide scrollbars */
-    }
-    .bgimg {
-    /* Background image */
-    background-image: url('bg.jpg');
-    background-size: 100%;
-    /* Full-screen */
-    height: 100%;
-    /* Center the background image */
-    background-position: center;
-    /* Scale and zoom in the image */
-    background-size: cover;
-    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-    position: relative;
-    /* Add a white text color to all elements inside the .bgimg container */
-    color: white;
-    /* Add a font */
-    font-family: "Courier New", Courier, monospace;
-    /* Set the font-size to 25 pixels */
-    font-size: 25px;
-    }
-
-    /* Position text in the top-left corner */
-    .topleft {
-    position: absolute;
-    top: 0;
-    left: 16px;
-    }
-
-    /* Position text in the bottom-left corner */
-    .bottomleft {
-    position: absolute;
-    bottom: 0;
-    left: 16px;
-    }
-
-    /* Position text in the middle */
-    .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    }
-
-    /* Style the <hr> element */
-    hr {
-    margin: auto;
-    width: 40%;
-    }
-</style>
-<script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("Dec 30, 2021 00:00:00").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-
-    // Get todays date and time
-    var now = new Date().getTime();
-
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // Display the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-
-    // If the count down is finished, write some text
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-    }, 1000);
-</script>
+</html>
